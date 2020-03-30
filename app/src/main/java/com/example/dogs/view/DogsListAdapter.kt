@@ -1,4 +1,4 @@
-package com.example.dogs.view
+package com.devtides.dogs.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dogs.R
 import com.example.dogs.databinding.ItemDogBinding
 import com.example.dogs.model.DogBreed
-import com.example.dogs.util.getProgressDrawable
-import com.example.dogs.util.loadImage
+import com.example.dogs.view.DogClickListener
+import com.example.dogs.view.ListFragmentDirections
 import kotlinx.android.synthetic.main.item_dog.view.*
 
-class DogsListAdapter(val dogsList: ArrayList<DogBreed>) : RecyclerView.Adapter<DogsListAdapter.DogViewHolder>(), DogClickListener{
+class DogsListAdapter(val dogsList: ArrayList<DogBreed>) : RecyclerView.Adapter<DogsListAdapter.DogViewHolder>(),
+    DogClickListener {
 
     fun updateDogList(newDogsList: List<DogBreed>) {
         dogsList.clear()
@@ -41,5 +42,5 @@ class DogsListAdapter(val dogsList: ArrayList<DogBreed>) : RecyclerView.Adapter<
         Navigation.findNavController(v).navigate(action)
     }
 
-    class DogViewHolder (var view: ItemDogBinding) : RecyclerView.ViewHolder(view.root)
+    class DogViewHolder(var view: ItemDogBinding) : RecyclerView.ViewHolder(view.root)
 }

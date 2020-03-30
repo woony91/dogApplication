@@ -20,6 +20,3 @@ class DogsApiService {
         return api.getDogs()
     }
 }
-
-
-//https://raw.githubusercontent.com/DevTides/DogsApi/master/dogs.json

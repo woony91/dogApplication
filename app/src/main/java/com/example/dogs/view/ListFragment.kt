@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.devtides.dogs.view.DogsListAdapter
 
 import com.example.dogs.R
 import com.example.dogs.viewmodel.ListViewModel
